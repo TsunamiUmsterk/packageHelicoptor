@@ -78,7 +78,7 @@ if(keyDown("left")) {
  helicopterSprite.x = helicopterSprite.x - 3
  
  if(!boxBase.isTouching(packageSprite)) {
-packageBody.position.x = packageBody.position.x - 3
+Matter.Body.translate(packageBody, {x : -3, y : 0});
  } 
 }
 
@@ -86,7 +86,7 @@ if(keyDown("right")) {
 	helicopterSprite.x = helicopterSprite.x + 3
 
 if(!boxBase.isTouching(packageSprite)) {
-	packageBody.position.x = packageBody.position.x + 3
+Matter.Body.translate(packageBody, {x : 3, y : 0});
 		 } 
     }
 
